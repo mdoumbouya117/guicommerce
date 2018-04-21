@@ -1,0 +1,31 @@
+nav {
+/*     display: inline-block;
+    text-align: center; */
+    & > .gui-logo {
+        color: white;
+    }
+
+    & > button {
+        left: 0;
+        position: absolute;
+    }
+    & > .fa {
+        float: right;
+        margin-top: 13px;
+    }
+}
+.home-image {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../../assets/images/home.jpg) center top fixed;
+    background-repeat: repeat-x;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.navbar-dark {
+    background-color: black;
+}
