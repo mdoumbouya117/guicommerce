@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticlesNumberService } from '../shared/services/articles-number.service';
+//import { ArticlesNumberService } from '../shared/services/articles-number.service';
 
 @Component({
   selector: 'app-header',
@@ -10,21 +10,21 @@ export class HeaderComponent implements OnInit {
   public test: number;
   public num: any;
 
-  constructor(public articlesNumberService: ArticlesNumberService) {
-    this.test = this.articlesNumberService.articlesNumber;
-    console.log(this.test);
+  constructor(/* public articlesNumberService: ArticlesNumberService */) {
+    /* this.test = this.articlesNumberService.articlesNumber;
+    console.log(this.test); */
       }
 
   ngOnInit() {
-    this.articlesNumberService.testNumberCount.subscribe(res => {
+   /*  this.articlesNumberService.testNumberCount.subscribe(res => {
       this.num = res;
-    });
+    }); */
   }
 
   increment() {
-    this.articlesNumberService.testNumberCount.subscribe(res => {
+    /* this.articlesNumberService.testNumberCount.subscribe(res => {
       this.num = res;
-    });
+    }); */
   }
 
 }
