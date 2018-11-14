@@ -1,3 +1,25 @@
+main {
+    height: 45vh;
+}
 .article-image {
     max-height: 430px;
+}
+.baseline{
+    color: white;
+    padding-top: 15%;
+    h1, p:first-child  {
+        background-color: #868e96cc;
+
+    }
+}
+.bg-image {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('../../assets/images/bg-image.jpg');
+    background-repeat: repeat-x;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
