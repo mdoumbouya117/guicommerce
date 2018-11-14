@@ -1,8 +1,6 @@
-main {
-    height: 45vh;
-}
 .article-image {
-    max-height: 430px;
+    //max-height: 430px;
+    max-width: 100%;
 }
 .baseline{
     color: white;
@@ -13,10 +11,10 @@ main {
     }
 }
 .bg-image {
-    height: 100%;
-    margin: 0;
+    height: 60vh;
+    margin-bottom: 15px;
     padding: 0;
-    background-image: url('../../assets/images/bg-image.jpg');
+   // background-image: url('../../assets/images/bg-image.jpg');
     background-repeat: repeat-x;
     -moz-background-size: cover;
     -o-background-size: cover;
