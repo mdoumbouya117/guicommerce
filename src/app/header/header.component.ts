@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-//import { ArticlesNumberService } from '../shared/services/articles-number.service';
 
 @Component({
   selector: 'app-header',
@@ -7,24 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public test: number;
-  public num: any;
+  constructor() {}
 
-  constructor(/* public articlesNumberService: ArticlesNumberService */) {
-    /* this.test = this.articlesNumberService.articlesNumber;
-    console.log(this.test); */
-      }
-
-  ngOnInit() {
-   /*  this.articlesNumberService.testNumberCount.subscribe(res => {
-      this.num = res;
-    }); */
-  }
+  ngOnInit() {}
 
   increment() {
-    /* this.articlesNumberService.testNumberCount.subscribe(res => {
-      this.num = res;
-    }); */
   }
 
 }
