@@ -7,7 +7,7 @@ nav {
 
     & > button {
         left: 0;
-        position: absolute;
+       // position: absolute;
     }
     & > .fa {
         float: right;
@@ -28,4 +28,17 @@ nav {
 
 .navbar-dark {
     background-color: black;
+}
+
+.bne-sidebar {
+    /* position: absolute;
+    left: 0;
+    top: 0;
+    background-color: red;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1; */
+}
+.bne-navbar-nav > li {
+    // position: absolute;
 }

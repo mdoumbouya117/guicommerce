@@ -1,26 +1,46 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-  <a class="navbar-brand gui-logo" >Guinée e-commerce</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand gui-logo" >FreeShop</a>
+  <button (click)="collapsed = !collapsed" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+  <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" >Enfant</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">Nouveautés</a>
-      </li>           
-      <li class="nav-item"><a href="" class="nav-link">Collection</a></li>
-      <li class="nav-item"><a href="" class="nav-link">Accessoires</a></li>
-      <li class="nav-item"><a href="" class="nav-link">Jeans</a></li>
-      <li class="nav-item"><a href="" class="nav-link">Costumes</a></li>
-      <li class="nav-item"><a href="" class="nav-link">Tendances</a></li>
+        <a class="nav-link" href="#">Femme</a>
+      </li>
       <li class="nav-item">
-        <a class="nav-link" href="">shop</a>
+        <a class="nav-link" href="#">Homme</a>
       </li>
     </ul>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <div *ngIf="collapsed">
+        <ul class="row nav nav-tabs" id="myTab" role="tablist">
+          <li class="col-4 nav-item">
+            <a class="nav-link active" id="enfant-tab" data-toggle="tab" href="#enfant" role="tab" aria-controls="enfant" aria-selected="true">ENFANT</a>
+          </li>
+          <li class="col-4 nav-item">
+            <a class="nav-link" id="femme-tab" data-toggle="tab" href="#femme" role="tab" aria-controls="femme" aria-selected="false">FEMME</a>
+          </li>
+          <li class="col-4 nav-item">
+            <a class="nav-link" id="homme-tab" data-toggle="tab" href="#homme" role="tab" aria-controls="homme" aria-selected="false">HOMME</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="enfant" role="tabpanel" aria-labelledby="enfant-tab">
+            <app-sidebar></app-sidebar>
+          </div>
+          <div class="tab-pane fade" id="femme" role="tabpanel" aria-labelledby="femme-tab">
+              <app-sidebar></app-sidebar>
+          </div>
+          <div class="tab-pane fade" id="homme" role="tabpanel" aria-labelledby="homme-tab">
+            <app-sidebar></app-sidebar>            
+          </div>
+        </div>
+    </div>
   </div>
+  
   <i class="fa fa-shopping-cart" aria-hidden="true"></i>
 </nav>
