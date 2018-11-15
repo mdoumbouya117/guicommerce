@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule
   ],
   providers: [],
-  declarations: [ AppComponent, HeaderComponent, HomeComponent, FooterComponent ],
+  declarations: [ AppComponent, HeaderComponent, HomeComponent, FooterComponent, SidebarComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
