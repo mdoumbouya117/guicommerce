@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HommeComponent } from './home/homme/homme.component';
 import { EnfantComponent } from './home/enfant/enfant.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { ArticleDetailComponent } from './articles/article-detail/article-detail.component';
 
 @NgModule({
   imports: [
@@ -20,7 +22,7 @@ import { EnfantComponent } from './home/enfant/enfant.component';
     BrowserModule
   ],
   providers: [],
-  declarations: [ AppComponent, HeaderComponent, HomeComponent, FooterComponent, SidebarComponent, HommeComponent, EnfantComponent ],
+  declarations: [ AppComponent, HeaderComponent, HomeComponent, FooterComponent, SidebarComponent, HommeComponent, EnfantComponent, ArticlesComponent, ArticleDetailComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
