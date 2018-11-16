@@ -1,0 +1,23 @@
+.article-image {
+    //max-height: 430px;
+    max-width: 100%;
+}
+.baseline{
+    color: white;
+    padding-top: 200px;
+    h1, p:first-child  {
+        background-color: #868e96cc;
+
+    }
+}
+.bg-image {
+    min-height: 60vh;
+    margin-bottom: 15px;
+    padding: 0;
+    background-image: url('https://images.pexels.com/photos/35188/child-childrens-baby-children-s.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-repeat: repeat-x;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
