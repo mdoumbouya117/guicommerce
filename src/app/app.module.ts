@@ -14,13 +14,16 @@ import { EnfantComponent } from './home/enfant/enfant.component';
 import { FemmeComponent } from './home/femme/femme.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { ArticleDetailComponent } from './articles/article-detail/article-detail.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   imports: [
     CommonModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-    BrowserModule
+    BrowserModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   declarations: [ AppComponent, HeaderComponent, HomeComponent, FooterComponent, SidebarComponent, HommeComponent, EnfantComponent, FemmeComponent, ArticlesComponent, ArticleDetailComponent ],
