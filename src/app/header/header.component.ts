@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   //router: Router;
+  public collapsed: boolean = false;
   constructor(private router: Router) {}
 
   ngOnInit() {}
