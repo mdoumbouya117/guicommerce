@@ -42,3 +42,17 @@ nav {
 .bne-navbar-nav > li {
     // position: absolute;
 }
+
+.sub-nav {
+    height: 50px;
+    background-color: dimgray;
+}
+
+.bne-btn {
+    height: 100%;
+    border: none;
+    &:hover {
+        border-radius: 0;
+    }
+
+}
