@@ -17,7 +17,7 @@ export class ArticlesComponent implements OnInit {
 
   goToDetails = (article) => {
     console.log(article);
-    this.router.navigate(['enfant/jh/jh'])  // home
+    this.router.navigate([`enfant/chaussures/${article.reference}`])  // home
     console.log('hello')
 
   }
