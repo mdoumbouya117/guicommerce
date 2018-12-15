@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Article } from '../shared/models/article.model';
 import { articles } from '../shared/bd/articles';
 
@@ -10,15 +10,15 @@ import { articles } from '../shared/bd/articles';
 })
 export class ArticlesComponent implements OnInit {
   articles: Article[];
-  constructor(private router: Router) {}
+  categorie: string;
+  constructor(private router: Router, private route: ActivatedRoute) {}
   ngOnInit() {
     this.articles = articles;
+    this.categorie = this.route.snapshot.paramMap.get('categorie');
   }
 
   goToDetails = (article) => {
-    console.log(article);
-    this.router.navigate(['enfant/jh/jh'])  // home
-    console.log('hello')
+    this.router.navigate([`enfant/chaussures/${article.reference}`]);  // home
 
   }
 

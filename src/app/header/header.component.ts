@@ -7,14 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  //router: Router;
-  public collapsed: boolean = false;
+
+  public collapsed = false;
   constructor(private router: Router) {}
 
   ngOnInit() {}
 
   increment(router: Router) {
-    console.log('test')
+    console.log('test');
    // router.navigate(['/enfant']);
   }
 

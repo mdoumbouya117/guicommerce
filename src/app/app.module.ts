@@ -26,7 +26,17 @@ import { environment } from '../environments/environment';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
-  declarations: [ AppComponent, HeaderComponent, HomeComponent, FooterComponent, SidebarComponent, HommeComponent, EnfantComponent, FemmeComponent, ArticlesComponent, ArticleDetailComponent ],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    FooterComponent,
+    SidebarComponent,
+    HommeComponent,
+    EnfantComponent,
+    FemmeComponent,
+    ArticlesComponent,
+    ArticleDetailComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
