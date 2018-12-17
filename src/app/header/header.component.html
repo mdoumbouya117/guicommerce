@@ -45,7 +45,27 @@
     </div>
   </div>
   
-  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+  <div>
+      <span style="font-size:1.5rem">
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+      </span>
+      <span class="badge badge-dark" style="position: absolute; display: block; top: 50%; padding: 0; margin-left: 5px;">{{cartService.getNbArticleInCart()}}</span>
+
+  </div>
+  <div class="dropdown">
+      <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="{{selectedCountry.flag}}" width="15" alt="{{selectedCountry.name}}">
+        <span>
+        {{selectedCountry.name}}
+        </span>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <button *ngFor="let country of countries" (click)="selectCounty(country)" class="dropdown-item" type="button">
+            <img src="{{country.flag}}" width="15" alt="{{country.name}}">
+            <span>{{country.name}}</span>
+        </button>
+      </div>
+    </div>
 </nav>
 
 <div class="sub-nav d-none d-md-flex">
