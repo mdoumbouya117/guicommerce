@@ -69,10 +69,12 @@
 </nav>
 
 <div class="sub-nav d-none d-md-flex">
-  <button type="button" class="btn btn-outline-light bne-btn">Nouveautés</button>
+  <button [routerLink]="['/enfant/nouveautes']" type="button" class="btn btn-outline-light bne-btn">Nouveautés</button>
+  <!-- <button [routerLink]="['/enfant/chaussures']" routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }" type="button" class="btn btn-outline-light bne-btn">Chaussures</button> -->
   <button [routerLink]="['/enfant/chaussures']" type="button" class="btn btn-outline-light bne-btn">Chaussures</button>
-  <button type="button" class="btn btn-outline-light bne-btn">Accessoires</button>
-  <button type="button" class="btn btn-outline-light bne-btn">Vêtements</button>
-  <button type="button" class="btn btn-outline-light bne-btn">Sport</button>
-  <button type="button" class="btn btn-outline-light bne-btn">Promos</button>
+  <button [routerLink]="['/enfant/accessoires']" type="button" class="btn btn-outline-light bne-btn">Accessoires</button>
+  <button [routerLink]="['/enfant/vetements']" type="button" class="btn btn-outline-light bne-btn">Vêtements</button>
+  <button [routerLink]="['/enfant/sport']" type="button" class="btn btn-outline-light bne-btn">Sport</button>
+  <button [routerLink]="['/enfant/promos']" type="button" class="btn btn-outline-light bne-btn">Promos</button>
 </div>

@@ -2,12 +2,35 @@
     cursor: pointer;
 }
 
-.bg-img {
+.bg-img-nouveautes,
+.bg-img-chaussures,
+.bg-img-accessoires,
+.bg-img-sport,
+.bg-img-vetements,
+.bg-img-promos {
     border-radius: 0;
     height: 15vh;
     margin-bottom: 15px;
     padding: 0;
-    background-image: url(https://images.pexels.com/photos/404168/pexels-photo-404168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-repeat: repeat-x;
     background-size: cover;
+}
+
+.bg-img-nouveautes {
+    background-image: url(https://images.pexels.com/photos/404168/pexels-photo-404168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+.bg-img-chaussures {
+    background-image: url(https://images.pexels.com/photos/404168/pexels-photo-404168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+.bg-img-accessoires {
+    background-image: url(https://images.pexels.com/photos/404168/pexels-photo-404168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+.bg-img-sport {
+    background-image: url(https://images.pexels.com/photos/404168/pexels-photo-404168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+.bg-img-vetements {
+    background-image: url(https://images.pexels.com/photos/404168/pexels-photo-404168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+.bg-img-promos {
+    background-image: url(https://images.pexels.com/photos/404168/pexels-photo-404168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 }
