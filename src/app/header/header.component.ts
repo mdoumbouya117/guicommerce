@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
 
   selectedCountry = this.countries[0];
 
-  constructor(private router: Router, private cartService: CartService) {}
+  constructor(private router: Router, public cartService: CartService) {}
 
   ngOnInit() {}
 
