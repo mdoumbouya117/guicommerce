@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+###DEV 
+
+    ajouter, plus tard, des badges dans les modals pour voir le nombre d'article existant pour chauqe critère (<span class="badge badge-primary badge-pill">14</span>) à voir sur asos.com par exemple.

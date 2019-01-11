@@ -5,6 +5,7 @@ export class Article {
         public image: string,
         public description: string,
         public price: number,
+        public reference: string,
         public promo?: number
     ) {}
 }
