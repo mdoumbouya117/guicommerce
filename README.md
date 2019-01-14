@@ -30,4 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ###DEV 
 
-    ajouter, plus tard, des badges dans les modals pour voir le nombre d'article existant pour chauqe critère (<span class="badge badge-primary badge-pill">14</span>) à voir sur asos.com par exemple.
+    1- ajouter, plus tard, des badges dans les modals pour voir le nombre d'article existant pour chauqe critère (<span class="badge badge-primary badge-pill">14</span>) à voir sur asos.com par exemple.
+
+    2- revoir une bonne manière de fiare le .checkmark-white:after (la classe reprend les même params que .checkmark:after à la diff du border)
+

@@ -13,6 +13,7 @@ export class ArticlesComponent implements OnInit {
   categorie: string;
   listTypeTrie = ["croissant", "décroissant"];
   typeTrie = "";
+  rangePrix = 100;
 
   constructor(private router: Router, private route: ActivatedRoute) {}
     ngOnInit() {
