@@ -17,6 +17,7 @@ import { ArticlesComponent } from './articles/articles.component';
 import { ArticleDetailComponent } from './articles/article-detail/article-detail.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { FiltersComponent } from './filters/filters.component';
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import { environment } from '../environments/environment';
     EnfantComponent,
     FemmeComponent,
     ArticlesComponent,
-    ArticleDetailComponent ],
+    ArticleDetailComponent,
+    FiltersComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

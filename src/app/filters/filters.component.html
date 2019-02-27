@@ -1,0 +1,89 @@
+<div class="card list-group-item d-flex justify-content-between align-items-left">
+  <div class="card-header bne-cursor-pointer" id="headingCouleur" data-toggle="collapse" data-target="#collapseCouleur" aria-expanded="true" aria-controls="collapseCouleur">
+    <h5 class="mb-0">
+      <button class="btn btn-link">
+        Couleur
+      </button>
+    </h5>
+  </div>
+  <div id="collapseCouleur" class="collapse" aria-labelledby="headingCouleur" data-parent="#accordion">
+    <div class="row card-body">
+        <label class="col-5 container" for="icouleurCheckbox1">
+            <input type="checkbox" id="icouleurCheckbox1" value="noir" (change)="filters($event, 'couleur')">
+            <span class="checkmark" style="background-color: black"></span>
+            <span class="checkmark-title">Noire</span>
+        </label>
+        <label class="col-5 container" for="icouleurCheckbox2">
+            <input type="checkbox" id="icouleurCheckbox2" value="rouge" (change)="filters($event, 'couleur')">
+            <span class="checkmark" style="background-color: red"></span>
+            <span class="checkmark-title">Rouge</span>
+        </label>
+        <label class="col-5 container" for="icouleurCheckbox3">
+            <input type="checkbox" id="icouleurCheckbox3" value="blanc" (change)="filters($event, 'couleur')">
+            <span class="checkmark-white" style="background-color: white; border: 1px solid #838383"></span>
+            <span class="checkmark-title">Blache</span>
+        </label>
+        <label class="col-5 container" for="icouleurCheckbox4">
+            <input type="checkbox" id="icouleurCheckbox4" value="bleu" (change)="filters($event, 'couleur')">
+            <span class="checkmark" style="background-color: blue"></span>
+            <span class="checkmark-title">Bleue</span>
+        </label>
+    </div>
+  </div>
+</div>
+<div class="card list-group-item d-flex justify-content-between align-items-left">
+  <div class="card-header bne-cursor-pointer" id="headingPrix" data-toggle="collapse" data-target="#collapsePrix" aria-expanded="false" aria-controls="collapsePrix">
+    <h5 class="mb-0">
+      <button class="btn btn-link collapsed">
+        Prix
+      </button>
+    </h5>
+  </div>
+  <div id="collapsePrix" class="collapse" aria-labelledby="headingPrix" data-parent="#accordion">
+    <div class="card-body">
+        <p class="row">
+            <small class="col-8">€ 10</small>
+            <small class="col-4">€ {{rangePrix}}</small>
+        </p>
+        <input type="range" (change)="filters($event, 'range')" class="custom-range d-flex" min="10" max="100" step="5" [(ngModel)]="rangePrix" value="[250,450]" id="rangePrix">
+    </div>
+  </div>
+</div>
+<div class="card list-group-item d-flex justify-content-between align-items-left">
+  <div class="card-header bne-cursor-pointer" id="headingTaille" data-toggle="collapse" data-target="#collapseTaille" aria-expanded="false" aria-controls="collapseTaille">
+    <h5 class="mb-0">
+      <button class="btn btn-link collapsed">
+        Taille
+      </button>
+    </h5>
+  </div>
+  <div id="collapseTaille" class="collapse" aria-labelledby="headingTaille" data-parent="#accordion">
+    <div class="row card-body">
+        <label class="col-5 container" for="tailleCheckbox1">
+            <input type="checkbox" id="tailleCheckbox1" value="34" (change)="filters($event, 'taille')">
+            <span class="checkmark-white" style="background-color: white; border: 1px solid #838383"></span>
+            <span class="checkmark-title">34</span>
+        </label>
+        <label class="col-5 container" for="tailleCheckbox2">
+            <input type="checkbox" id="tailleCheckbox2" value="35" (change)="filters($event, 'taille')">
+            <span class="checkmark-white" style="background-color: white; border: 1px solid #838383"></span>
+            <span class="checkmark-title">35</span>
+        </label>
+        <label class="col-5 container" for="tailleCheckbox3">
+            <input type="checkbox" id="tailleCheckbox3" value="36" (change)="filters($event, 'taille')">
+            <span class="checkmark-white" style="background-color: white; border: 1px solid #838383"></span>
+            <span class="checkmark-title">36</span>
+        </label>
+        <label class="col-5 container" for="tailleCheckbox4">
+            <input type="checkbox" id="tailleCheckbox4" value="37" (change)="filters($event, 'taille')">
+            <span class="checkmark-white" style="background-color: white; border: 1px solid #838383"></span>
+            <span class="checkmark-title">37</span>
+        </label>
+    </div>
+  </div>
+  <!-- <div id="collapseTaille" class="collapse" aria-labelledby="headingTaille" data-parent="#accordion">
+    <div class="card-body">
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    </div>
+  </div> -->
+</div>
