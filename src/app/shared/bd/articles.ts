@@ -5,7 +5,9 @@ export const articles = [
         "description": "desc1",
         "price": 18,
         "promo": 4,
-        "reference": "ref1"
+        "reference": "ref1",
+        "couleur": "blanc",
+        "taille": 18
     },
     { "title": "Title2",
         "categorie": "accessoires",
@@ -13,7 +15,9 @@ export const articles = [
         "description": "desc2",
         "price": 12,
         "promo": 3,
-        "reference": "ref2"
+        "reference": "ref2",
+        "couleur": "rouge",
+        "taille": 4
     },
     { "title": "Title3",
         "categorie": "accessoires",
@@ -21,7 +25,9 @@ export const articles = [
         "description": "desc3",
         "price": 42,
         "promo": 20,
-        "reference": "ref3"
+        "reference": "ref3",
+        "couleur": "rouge",
+        "taille": 18
     },
     { "title": "Title4",
         "categorie": "accessoires",
@@ -29,7 +35,9 @@ export const articles = [
         "description": "desc4",
         "price": 120,
         "promo": 100,
-        "reference": "ref4"
+        "reference": "ref4",
+        "couleur": "blanc",
+        "taille": 8
     },
     { "title": "Title5",
         "categorie": "accessoires",
@@ -37,7 +45,9 @@ export const articles = [
         "description": "desc5",
         "price": 36,
         "promo": 8,
-        "reference": "ref5"
+        "reference": "ref5",
+        "couleur": "rouge",
+        "taille": 18
     },
     { "title": "Title6",
         "categorie": "accessoires",
@@ -45,7 +55,9 @@ export const articles = [
         "description": "desc6",
         "price": 12,
         "promo": 4,
-        "reference": "ref6"
+        "reference": "ref6",
+        "couleur": "rouge",
+        "taille": 18
     },
     { "title": "Title7",
         "categorie": "accessoires",
@@ -53,7 +65,9 @@ export const articles = [
         "description": "desc7",
         "price": 122,
         "promo": 110,
-        "reference": "ref7"
+        "reference": "ref7",
+        "couleur": "rouge",
+        "taille": 1
     },
     { "title": "Title8",
         "categorie": "accessoires",
@@ -61,7 +75,9 @@ export const articles = [
         "description": "desc8",
         "price": 88,
         "promo": 40,
-        "reference": "ref8"
+        "reference": "ref8",
+        "couleur": "noir",
+        "taille": 2
     },
     { "title": "Title9",
         "categorie": "accessoires",
@@ -69,7 +85,9 @@ export const articles = [
         "description": "desc9",
         "price": 28,
         "promo": 12,
-        "reference": "ref9"
+        "reference": "ref9",
+        "couleur": "rouge",
+        "taille": 11
     },
     { "title": "Title10",
         "categorie": "accessoires",
@@ -77,7 +95,9 @@ export const articles = [
         "description": "desc10",
         "price": 51,
         "promo": 14,
-        "reference": "ref10"
+        "reference": "ref10",
+        "couleur": "rouge",
+        "taille": 14
     },
     { "title": "Title11",
         "categorie": "accessoires",
@@ -85,7 +105,9 @@ export const articles = [
         "description": "desc11",
         "price": 91,
         "promo": 49,
-        "reference": "ref11"
+        "reference": "ref11",
+        "couleur": "blanc",
+        "taille": 7
     },
     { "title": "Title12",
         "categorie": "accessoires",
@@ -93,7 +115,9 @@ export const articles = [
         "description": "desc12",
         "price": 65,
         "promo": 25,
-        "reference": "ref12"
+        "reference": "ref12",
+        "couleur": "rouge",
+        "taille": 5
     },
     { "title": "Title13",
         "categorie": "accessoires",
@@ -101,7 +125,9 @@ export const articles = [
         "description": "desc13",
         "price": 85,
         "promo": 51,
-        "reference": "ref13"
+        "reference": "ref13",
+        "couleur": "rouge",
+        "taille": 3
     },
     { "title": "Title14",
         "categorie": "accessoires",
@@ -109,7 +135,9 @@ export const articles = [
         "description": "desc14",
         "price": 94,
         "promo": 74,
-        "reference": "ref14"
+        "reference": "ref14",
+        "couleur": "noir",
+        "taille": 48
     },
     { "title": "Title15",
         "categorie": "accessoires",
@@ -117,7 +145,9 @@ export const articles = [
         "description": "desc15",
         "price": 75,
         "promo": 50,
-        "reference": "ref15"
+        "reference": "ref15",
+        "couleur": "rouge",
+        "taille": 16
     },
     { "title": "Title16",
         "categorie": "accessoires",
@@ -125,7 +155,9 @@ export const articles = [
         "description": "desc16",
         "price": 122,
         "promo": 34,
-        "reference": "ref16"
+        "reference": "ref16",
+        "couleur": "rouge",
+        "taille": 12
     },
     { "title": "Title17",
         "categorie": "accessoires",
@@ -133,7 +165,9 @@ export const articles = [
         "description": "desc17",
         "price": 88,
         "promo": 44,
-        "reference": "ref17"
+        "reference": "ref17",
+        "couleur": "rouge",
+        "taille": 10
     },
     { "title": "Title18",
         "categorie": "accessoires",
@@ -141,7 +175,9 @@ export const articles = [
         "description": "desc18",
         "price": 116,
         "promo": 58,
-        "reference": "ref18"
+        "reference": "ref18",
+        "couleur": "bleu",
+        "taille": 20
     },
     { "title": "Title19",
         "categorie": "accessoires",
@@ -149,7 +185,9 @@ export const articles = [
         "description": "desc19",
         "price": 16,
         "promo": 8,
-        "reference": "ref19"
+        "reference": "ref19",
+        "couleur": "noir",
+        "taille": 36
     },
     { "title": "Title20",
         "categorie": "accessoires",
@@ -157,7 +195,9 @@ export const articles = [
         "description": "desc20",
         "price": 80,
         "promo": 40,
-        "reference": "ref20"
+        "reference": "ref20",
+        "couleur": "bleu",
+        "taille": 21
     },
     { "title": "Title21",
         "categorie": "accessoires",
@@ -165,7 +205,9 @@ export const articles = [
         "description": "desc21",
         "price": 65,
         "promo": 16,
-        "reference": "ref21"
+        "reference": "ref21",
+        "couleur": "rouge",
+        "taille": 28
     },
     { "title": "Title22",
         "categorie": "accessoires",
@@ -173,7 +215,9 @@ export const articles = [
         "description": "desc22",
         "price": 46,
         "promo": 23,
-        "reference": "ref22"
+        "reference": "ref22",
+        "couleur": "bleu",
+        "taille": 61
     },
     { "title": "Title23",
         "categorie": "accessoires",
@@ -181,7 +225,9 @@ export const articles = [
         "description": "desc23",
         "price": 90,
         "promo": 45,
-        "reference": "ref23"
+        "reference": "ref23",
+        "couleur": "rouge",
+        "taille": 68
     },
     { "title": "Title24",
         "categorie": "accessoires",
@@ -189,7 +235,9 @@ export const articles = [
         "description": "desc24",
         "price": 130,
         "promo": 65,
-        "reference": "ref24"
+        "reference": "ref24",
+        "couleur": "rouge",
+        "taille": 64
     },
     { "title": "Title25",
         "categorie": "accessoires",
@@ -197,7 +245,9 @@ export const articles = [
         "description": "desc25",
         "price": 70,
         "promo": 35,
-        "reference": "ref25"
+        "reference": "ref25",
+        "couleur": "rouge",
+        "taille": 65
     },
     { "title": "Title26",
         "categorie": "accessoires",
@@ -205,7 +255,9 @@ export const articles = [
         "description": "desc26",
         "price": 28,
         "promo": 14,
-        "reference": "ref26"
+        "reference": "ref26",
+        "couleur": "bleu",
+        "taille": 34
     },
     { "title": "Title27",
         "categorie": "accessoires",
@@ -213,7 +265,9 @@ export const articles = [
         "description": "desc27",
         "price": 35,
         "promo": 28,
-        "reference": "ref27"
+        "reference": "ref27",
+        "couleur": "rouge",
+        "taille": 32
     },
     { "title": "Title28",
         "categorie": "accessoires",
@@ -221,6 +275,8 @@ export const articles = [
         "description": "desc28",
         "price": 58,
         "promo": 28,
-        "reference": "ref28"
+        "reference": "ref28",
+        "couleur": "bleu",
+        "taille": 18
     }
 ];

@@ -6,6 +6,8 @@ export class Article {
         public description: string,
         public price: number,
         public reference: string,
-        public promo?: number
+        public couleur: string,
+        public promo?: number,
+        public taille?: string
     ) {}
 }
