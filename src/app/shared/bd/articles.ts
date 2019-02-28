@@ -1,5 +1,6 @@
 export const articles = [
-    { "title": "Title1",
+    { "id": "article1",
+        "title": "Title1",
         "categorie": "accessoires",
         "image": "../assets/images/1.jpg",
         "description": "desc1",
@@ -7,9 +8,10 @@ export const articles = [
         "promo": 4,
         "reference": "ref1",
         "couleur": "blanc",
-        "taille": 18
+        "taille": 35
     },
-    { "title": "Title2",
+    { "id": "article2",
+        "title": "Title2",
         "categorie": "accessoires",
         "image": "../assets/images/2.jpg",
         "description": "desc2",
@@ -17,9 +19,10 @@ export const articles = [
         "promo": 3,
         "reference": "ref2",
         "couleur": "rouge",
-        "taille": 4
+        "taille": 35
     },
-    { "title": "Title3",
+    { "id": "article3",
+        "title": "Title3",
         "categorie": "accessoires",
         "image": "../assets/images/3.jpg",
         "description": "desc3",
@@ -27,9 +30,10 @@ export const articles = [
         "promo": 20,
         "reference": "ref3",
         "couleur": "rouge",
-        "taille": 18
+        "taille": 35
     },
-    { "title": "Title4",
+    { "id": "article4",
+        "title": "Title4",
         "categorie": "accessoires",
         "image": "../assets/images/4.jpg",
         "description": "desc4",
@@ -37,9 +41,10 @@ export const articles = [
         "promo": 100,
         "reference": "ref4",
         "couleur": "blanc",
-        "taille": 8
+        "taille": 35
     },
-    { "title": "Title5",
+    { "id": "article5",
+        "title": "Title5",
         "categorie": "accessoires",
         "image": "../assets/images/5.jpg",
         "description": "desc5",
@@ -47,9 +52,10 @@ export const articles = [
         "promo": 8,
         "reference": "ref5",
         "couleur": "rouge",
-        "taille": 18
+        "taille": 35
     },
-    { "title": "Title6",
+    { "id": "article6",
+        "title": "Title6",
         "categorie": "accessoires",
         "image": "../assets/images/6.jpg",
         "description": "desc6",
@@ -57,9 +63,10 @@ export const articles = [
         "promo": 4,
         "reference": "ref6",
         "couleur": "rouge",
-        "taille": 18
+        "taille": 35
     },
-    { "title": "Title7",
+    { "id": "article7",
+        "title": "Title7",
         "categorie": "accessoires",
         "image": "../assets/images/7.jpg",
         "description": "desc7",
@@ -67,9 +74,10 @@ export const articles = [
         "promo": 110,
         "reference": "ref7",
         "couleur": "rouge",
-        "taille": 1
+        "taille": 35
     },
-    { "title": "Title8",
+    { "id": "article8",
+        "title": "Title8",
         "categorie": "accessoires",
         "image": "../assets/images/8.jpg",
         "description": "desc8",
@@ -77,9 +85,10 @@ export const articles = [
         "promo": 40,
         "reference": "ref8",
         "couleur": "noir",
-        "taille": 2
+        "taille": 35
     },
-    { "title": "Title9",
+    { "id": "article9",
+        "title": "Title9",
         "categorie": "accessoires",
         "image": "../assets/images/9.jpg",
         "description": "desc9",
@@ -87,9 +96,10 @@ export const articles = [
         "promo": 12,
         "reference": "ref9",
         "couleur": "rouge",
-        "taille": 11
+        "taille": 35
     },
-    { "title": "Title10",
+    { "id": "article0",
+        "title": "Title10",
         "categorie": "accessoires",
         "image": "../assets/images/10.jpg",
         "description": "desc10",
@@ -97,9 +107,10 @@ export const articles = [
         "promo": 14,
         "reference": "ref10",
         "couleur": "rouge",
-        "taille": 14
+        "taille": 35
     },
-    { "title": "Title11",
+    { "id": "article1",
+        "title": "Title11",
         "categorie": "accessoires",
         "image": "../assets/images/11.jpg",
         "description": "desc11",
@@ -107,9 +118,10 @@ export const articles = [
         "promo": 49,
         "reference": "ref11",
         "couleur": "blanc",
-        "taille": 7
+        "taille": 35
     },
-    { "title": "Title12",
+    { "id": "article2",
+        "title": "Title12",
         "categorie": "accessoires",
         "image": "../assets/images/12.jpg",
         "description": "desc12",
@@ -117,9 +129,10 @@ export const articles = [
         "promo": 25,
         "reference": "ref12",
         "couleur": "rouge",
-        "taille": 5
+        "taille": 35
     },
-    { "title": "Title13",
+    { "id": "article3",
+        "title": "Title13",
         "categorie": "accessoires",
         "image": "../assets/images/13.jpg",
         "description": "desc13",
@@ -127,9 +140,10 @@ export const articles = [
         "promo": 51,
         "reference": "ref13",
         "couleur": "rouge",
-        "taille": 3
+        "taille": 35
     },
-    { "title": "Title14",
+    { "id": "article4",
+        "title": "Title14",
         "categorie": "accessoires",
         "image": "../assets/images/14.jpg",
         "description": "desc14",
@@ -137,9 +151,10 @@ export const articles = [
         "promo": 74,
         "reference": "ref14",
         "couleur": "noir",
-        "taille": 48
+        "taille": 37
     },
-    { "title": "Title15",
+    { "id": "article5",
+        "title": "Title15",
         "categorie": "accessoires",
         "image": "../assets/images/15.jpg",
         "description": "desc15",
@@ -147,9 +162,10 @@ export const articles = [
         "promo": 50,
         "reference": "ref15",
         "couleur": "rouge",
-        "taille": 16
+        "taille": 36
     },
-    { "title": "Title16",
+    { "id": "article6",
+        "title": "Title16",
         "categorie": "accessoires",
         "image": "../assets/images/16.jpg",
         "description": "desc16",
@@ -157,9 +173,10 @@ export const articles = [
         "promo": 34,
         "reference": "ref16",
         "couleur": "rouge",
-        "taille": 12
+        "taille": 34
     },
-    { "title": "Title17",
+    { "id": "article7",
+        "title": "Title17",
         "categorie": "accessoires",
         "image": "../assets/images/1.jpg",
         "description": "desc17",
@@ -167,9 +184,10 @@ export const articles = [
         "promo": 44,
         "reference": "ref17",
         "couleur": "rouge",
-        "taille": 10
+        "taille": 34
     },
-    { "title": "Title18",
+    { "id": "article8",
+        "title": "Title18",
         "categorie": "accessoires",
         "image": "../assets/images/2.jpg",
         "description": "desc18",
@@ -177,9 +195,10 @@ export const articles = [
         "promo": 58,
         "reference": "ref18",
         "couleur": "bleu",
-        "taille": 20
+        "taille": 35
     },
-    { "title": "Title19",
+    { "id": "article9",
+        "title": "Title19",
         "categorie": "accessoires",
         "image": "../assets/images/3.jpg",
         "description": "desc19",
@@ -187,9 +206,10 @@ export const articles = [
         "promo": 8,
         "reference": "ref19",
         "couleur": "noir",
-        "taille": 36
+        "taille": 35
     },
-    { "title": "Title20",
+    { "id": "article0",
+        "title": "Title20",
         "categorie": "accessoires",
         "image": "../assets/images/4.jpg",
         "description": "desc20",
@@ -197,9 +217,10 @@ export const articles = [
         "promo": 40,
         "reference": "ref20",
         "couleur": "bleu",
-        "taille": 21
+        "taille": 35
     },
-    { "title": "Title21",
+    { "id": "article1",
+        "title": "Title21",
         "categorie": "accessoires",
         "image": "../assets/images/5.jpg",
         "description": "desc21",
@@ -207,9 +228,10 @@ export const articles = [
         "promo": 16,
         "reference": "ref21",
         "couleur": "rouge",
-        "taille": 28
+        "taille": 35
     },
-    { "title": "Title22",
+    { "id": "article2",
+        "title": "Title22",
         "categorie": "accessoires",
         "image": "../assets/images/1.jpg",
         "description": "desc22",
@@ -217,9 +239,10 @@ export const articles = [
         "promo": 23,
         "reference": "ref22",
         "couleur": "bleu",
-        "taille": 61
+        "taille": 36
     },
-    { "title": "Title23",
+    { "id": "article3",
+        "title": "Title23",
         "categorie": "accessoires",
         "image": "../assets/images/8.jpg",
         "description": "desc23",
@@ -227,9 +250,10 @@ export const articles = [
         "promo": 45,
         "reference": "ref23",
         "couleur": "rouge",
-        "taille": 68
+        "taille": 36
     },
-    { "title": "Title24",
+    { "id": "article4",
+        "title": "Title24",
         "categorie": "accessoires",
         "image": "../assets/images/10.jpg",
         "description": "desc24",
@@ -237,9 +261,10 @@ export const articles = [
         "promo": 65,
         "reference": "ref24",
         "couleur": "rouge",
-        "taille": 64
+        "taille": 36
     },
-    { "title": "Title25",
+    { "id": "article5",
+        "title": "Title25",
         "categorie": "accessoires",
         "image": "../assets/images/2.jpg",
         "description": "desc25",
@@ -247,9 +272,10 @@ export const articles = [
         "promo": 35,
         "reference": "ref25",
         "couleur": "rouge",
-        "taille": 65
+        "taille": 36
     },
-    { "title": "Title26",
+    { "id": "article6",
+        "title": "Title26",
         "categorie": "accessoires",
         "image": "../assets/images/1.jpg",
         "description": "desc26",
@@ -257,9 +283,10 @@ export const articles = [
         "promo": 14,
         "reference": "ref26",
         "couleur": "bleu",
-        "taille": 34
+        "taille": 35
     },
-    { "title": "Title27",
+    { "id": "article7",
+        "title": "Title27",
         "categorie": "accessoires",
         "image": "../assets/images/6.jpg",
         "description": "desc27",
@@ -267,9 +294,10 @@ export const articles = [
         "promo": 28,
         "reference": "ref27",
         "couleur": "rouge",
-        "taille": 32
+        "taille": 35
     },
-    { "title": "Title28",
+    { "id": "article8",
+        "title": "Title28",
         "categorie": "accessoires",
         "image": "../assets/images/2.jpg",
         "description": "desc28",
@@ -277,6 +305,6 @@ export const articles = [
         "promo": 28,
         "reference": "ref28",
         "couleur": "bleu",
-        "taille": 18
+        "taille": 37
     }
 ];
