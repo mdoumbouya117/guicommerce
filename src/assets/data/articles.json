@@ -1,4 +1,4 @@
-export const articles = [
+[
     { "id": "article1",
         "title": "Title1",
         "categorie": "accessoires",
@@ -307,4 +307,4 @@ export const articles = [
         "couleur": "bleu",
         "taille": 37
     }
-];
+]

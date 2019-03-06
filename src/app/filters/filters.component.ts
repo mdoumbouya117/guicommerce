@@ -19,13 +19,40 @@ export class FiltersComponent implements OnInit {
     {code: '#0000FF', label: 'Bleu'},
     {code: '#008000', label: 'Vert'},
     {code: '#808080', label: 'Gris'},
-    {code: '#800000', label: 'Gris'}
+    {code: '#800000', label: 'Marron'}
   ];
   public tailles = [
+    {label: 28},
+    {label: 29},
+    {label: 30},
+    {label: 31},
+    {label: 32},
+    {label: 33},
     {label: 34},
     {label: 35},
     {label: 36},
-    {label: 37}
+    {label: 37},
+    {label: 38},
+    {label: 39},
+    {label: 40},
+    {label: 41},
+    {label: 42},
+    {label: 43},
+    {label: 44},
+    {label: 45},
+    {label: 46},
+    {label: 47},
+    {label: 48},
+    {label: 49},
+
+    {label: 'XXS'},
+    {label: 'XS'},
+    {label: 'S'},
+    {label: 'M'},
+    {label: 'L'},
+    {label: 'XL'},
+    {label: 'XXL'}
+
   ];
   public filterParams = {
     couleurs: [],
@@ -44,7 +71,8 @@ export class FiltersComponent implements OnInit {
   }
 
   submit() {
-    this.articlesService.filterArticles(this.filterParams);
+    let h = this.articlesService.filterArticles(this.filterParams);
+    console.log('allMatch 54 ',h)
   }
 
   removeElementInArray = (array: string[], element: string) => {

@@ -1,113 +1,75 @@
 <div class="bg-img-{{categorie}}"></div>
 <div class="container-fluid">
-  <div class="row mb-3">
-    <div class="col-6 col-md-2 mb-3">
-      <select class="custom-select custom-select-md" [(ngModel)]="typeTrie" (ngModelChange)="trierParPrix(typeTrie)">
-          <option value="" disabled>Trier</option>
-          <option *ngFor="let item of listTypeTrie" [value]="item" >Prix {{item}}</option>
-      </select>
-    </div>
-
-    <!-- modals - fliltres -->
-    <div class="col-6 d-flex mb-3">
-      <div class="text-center w-100 d-md-none">
-          <button type="button" class="btn btn-outline-secondary btn-md w-100" data-toggle="modal" data-target="#filtersModal">
-            Filtrer
-          </button>
-      </div>
-
-      <!-- Modal 1 -->
-      <div class="modal right fade" id="filtersModal" tabindex="-1" role="dialog" aria-labelledby="filtersModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
+    <div class="row mb-3">
+      <div class="col-6">
+          <select class="custom-select custom-select-md" [(ngModel)]="typeTrie" (ngModelChange)="trierParPrix(typeTrie)">
+              <option value="" disabled>Trier</option>
+              <option *ngFor="let item of listTypeTrie" [value]="item" >Prix {{item}}</option>
+          </select>
+        </div>
     
-            <div class="modal-header">
-              <h4 class="modal-title" id="filtersModalLabel">Filtrer</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
+        <!-- modals - fliltres -->
+        <div class="col-6">
+          <div class="text-center w-100">
+              <button type="button" class="btn btn-outline-secondary btn-md w-100" data-toggle="modal" data-target="#filtersModal">
+                Filtrer
+              </button>
+          </div>
     
-            <div class="modal-body">
-                <!-- <button type="button" class="btn btn-outline-secondary btn-md w-100" data-toggle="modal" data-target="#filtersModal2">
-                    Filtrer2
-                  </button> -->
-                  <div id="accordion" class="list-group list-group-flush">
-                    <app-filters></app-filters>
-                  </div>
-              <!-- <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-              </p> -->
-            </div>
-    
-          </div><!-- modal-content -->
-        </div><!-- modal-dialog -->
-      </div><!-- modal 1 -->
-
-      <!-- Modal 2 -->
-      <!-- <div class="modal right fade" id="filtersModal2" tabindex="-1" role="dialog" aria-labelledby="filtersModalLabel">
+          <!-- Modal 1 -->
+          <div class="modal right fade" id="filtersModal" tabindex="-1" role="dialog" aria-labelledby="filtersModalLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
         
                 <div class="modal-header">
-                  <button type="button" class="close p-0 mt-auto mb-auto ml-0" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true" class="small">
-                      <i class="fas fa-arrow-left"></i>Retour
-                    </span>
-                  </button>
-                  <h4 class="modal-title" id="filtersModalLabel">Filtrer2</h4>
+                  <h4 class="modal-title" id="filtersModalLabel">Filtrer</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
         
                 <div class="modal-body">
-                    
-                  <p>Anim pariatur cliche reprehenderit
-                    
-                  </p>
+                    <!-- <button type="button" class="btn btn-outline-secondary btn-md w-100" data-toggle="modal" data-target="#filtersModal2">
+                        Filtrer2
+                      </button> -->
+                      <div id="accordion" class="list-group list-group-flush">
+                        <app-filters></app-filters>
+                      </div>
+                  <!-- <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </p> -->
                 </div>
         
+              </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+          </div><!-- modal 1 -->
+    
+          <!-- Modal 2 -->
+          <!-- <div class="modal right fade" id="filtersModal2" tabindex="-1" role="dialog" aria-labelledby="filtersModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+            
+                    <div class="modal-header">
+                      <button type="button" class="close p-0 mt-auto mb-auto ml-0" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="small">
+                          <i class="fas fa-arrow-left"></i>Retour
+                        </span>
+                      </button>
+                      <h4 class="modal-title" id="filtersModalLabel">Filtrer2</h4>
+                    </div>
+            
+                    <div class="modal-body">
+                        
+                      <p>Anim pariatur cliche reprehenderit
+                        
+                      </p>
+                    </div>
+            
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-      </div> -->
-
-      <div class="col-10 d-none d-md-flex">
-
-          <div class="row">
-            <div class="col-3">
-                <select class="custom-select custom-select-md" [(ngModel)]="typeTrie" (ngModelChange)="trierParPrix(typeTrie)">
-                    <option value="" disabled>Trier</option>
-                    <option *ngFor="let item of listTypeTrie" [value]="item" >Prix {{item}}</option>
-                </select>
-            </div>
-            <div class="col-3">
-              <select class="custom-select custom-select-md" [(ngModel)]="typeTrie" (ngModelChange)="trierParPrix(typeTrie)">
-                    <option value="" disabled>Trier</option>
-                    <option *ngFor="let item of listTypeTrie" [value]="item" >Prix {{item}}</option>
-                </select>
-            </div>
-            <div class="col-3">
-              <select class="custom-select custom-select-md" [(ngModel)]="typeTrie" (ngModelChange)="trierParPrix(typeTrie)">
-                    <option value="" disabled>Trier</option>
-                    <option *ngFor="let item of listTypeTrie" [value]="item" >Prix {{item}}</option>
-                </select>
-            </div>
-            <div class="col-3">
-              <select class="custom-select custom-select-md" [(ngModel)]="typeTrie" (ngModelChange)="trierParPrix(typeTrie)">
-                    <option value="" disabled>Trier</option>
-                    <option *ngFor="let item of listTypeTrie" [value]="item" >Prix {{item}}</option>
-                </select>
-            </div>
-          </div>
-
-      </div>
+          </div> -->
+        </div>
     </div>
     <div class="row">
-      <!--  -->
-
-
-      <div id="accordion" class="col-3 list-group list-group-flush d-none d-md-flex">
-        <app-filters></app-filters>
-      </div>
-
-        <!--  -->
-      <div class="col-6 col-md-2 col-sm-3" *ngFor="let article of articles" >
+      <div class="col-6 col-xs-3 col-sm-3" *ngFor="let article of articles" >
         <div (click)="goToDetails(article)" class="card mb-4 bne-cursor-pointer">
           <img class="card-img-top article-image" alt="{{article.title}}" src="{{article.image}}" data-holder-rendered="true">
           <div class="card-body">
@@ -123,5 +85,4 @@
         </div>
       </div>
     </div>
-  </div>
   <hr>
