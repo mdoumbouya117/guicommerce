@@ -61,7 +61,7 @@
           </span>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <button *ngFor="let country of countries" (click)="selectCounty(country)" class="dropdown-item" type="button">
+          <button *ngFor="let country of countries" (click)="selectCounty(country)" class="dropdown-item bne-cursor-pointer" type="button">
               <img src="{{country.flag}}" width="15" alt="{{country.name}}">
               <span>{{country.name}}</span>
           </button>

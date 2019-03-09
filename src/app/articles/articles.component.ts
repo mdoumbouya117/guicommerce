@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Article } from '../shared/models/article.model';
 import { articles } from '../shared/bd/articles';
+import { ArticlesService } from '../shared/services/articles/articles.service';
 
 @Component({
   selector: 'app-articles',
@@ -15,9 +16,9 @@ export class ArticlesComponent implements OnInit {
   typeTrie = "";
   rangePrix = 100;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router, private route: ActivatedRoute, public articlesService: ArticlesService) {}
     ngOnInit() {
-      this.articles = articles;
+      this.articles = this.articlesService.getArticles();
       this.categorie = this.route.snapshot.paramMap.get('categorie');
       
     }

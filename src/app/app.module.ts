@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,7 @@ import { ArticlesComponent } from './articles/articles.component';
 import { ArticleDetailComponent } from './articles/article-detail/article-detail.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { FiltersComponent } from './filters/filters.component';
 
 @NgModule({
   imports: [
@@ -25,6 +27,8 @@ import { environment } from '../environments/environment';
     NgbModule.forRoot(),
     BrowserModule,
     FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
@@ -38,7 +42,8 @@ import { environment } from '../environments/environment';
     EnfantComponent,
     FemmeComponent,
     ArticlesComponent,
-    ArticleDetailComponent ],
+    ArticleDetailComponent,
+    FiltersComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
