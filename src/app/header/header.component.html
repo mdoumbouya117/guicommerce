@@ -1,71 +1,75 @@
-<nav class="navbar navbar-expand-md navbar-dark">
-  <a [routerLink]="[ '/' ]" class="navbar-brand gui-logo">FreeShop</a>
-  <button (click)="collapsed = !collapsed" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+<nav class="row navbar navbar-expand-md navbar-dark">
+  <button type="button" class="btn btn-outline-secondary mr-1" data-toggle="modal" data-target="#headerModal">
+      <span class="navbar-toggler-icon"></span>
   </button>
+  <a [routerLink]="[ '/' ]" class="navbar-brand gui-logo">FreeShop</a>
+  <!-- <button (click)="collapsed = !collapsed" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
 
-  <ul class="nav d-none d-md-flex">
-    <li class="nav-item">
-        <!-- <a routerLink="/enfant" >
-          link to user component
-        </a> -->
-      <a class="nav-link" [routerLink]="['/enfant']">Enfant</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/femme']">Femme</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/homme']">Homme</a>
-    </li>
-  </ul>
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <div *ngIf="collapsed">
-      <ul class="row nav nav-tabs" id="myTab" role="tablist">
-        <li class="col-4 nav-item">
-          <a [routerLink]="['/enfant']" class="nav-link" id="enfant-tab" data-toggle="tab" role="tab" aria-controls="enfant" aria-selected="true">ENFANT</a>
-        </li>
-        <li class="col-4 nav-item">
-          <a [routerLink]="['/femme']" class="nav-link" id="femme-tab" data-toggle="tab" role="tab" aria-controls="femme" aria-selected="false">FEMME</a>
-        </li>
-        <li class="col-4 nav-item">
-          <a [routerLink]="['/homme']" class="nav-link" id="homme-tab" data-toggle="tab" role="tab" aria-controls="homme" aria-selected="false">HOMME</a>
-        </li>
-      </ul>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="enfant" role="tabpanel" aria-labelledby="enfant-tab">
-          <app-sidebar></app-sidebar>
+  <div class="modal left fade" id="headerModal" tabindex="-1" role="dialog" aria-labelledby="headerModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="modal-title" id="headerModalLabel">FreeShop</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
-        <div class="tab-pane fade" id="femme" role="tabpanel" aria-labelledby="femme-tab">
-            <app-sidebar></app-sidebar>
+
+        <div class="modal-body">
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="enfant-tab" data-toggle="tab" href="#enfant" role="tab" aria-controls="enfant" aria-selected="true">ENFANT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="femme-tab" data-toggle="tab" href="#femme" role="tab" aria-controls="femme" aria-selected="false">FEMME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="homme-tab" data-toggle="tab" href="#homme" role="tab" aria-controls="homme" aria-selected="false">HOMME</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="enfant" role="tabpanel" aria-labelledby="enfant-tab">
+                    <app-sidebar></app-sidebar>
+                </div>
+                <div class="tab-pane fade" id="femme" role="tabpanel" aria-labelledby="femme-tab">
+                    <app-sidebar></app-sidebar>
+                </div>
+                <div class="tab-pane fade" id="homme" role="tabpanel" aria-labelledby="homme-tab">
+                    <app-sidebar></app-sidebar>
+                </div>
+              </div>
         </div>
-        <div class="tab-pane fade" id="homme" role="tabpanel" aria-labelledby="homme-tab">
-          <app-sidebar></app-sidebar>            
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div>
+
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal 1 -->
+
+  <div class="d-flex ml-auto">
+    <div class="mr-3">
       <span style="font-size:1.5rem">
-          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
       </span>
-      <span class="badge badge-dark" style="position: absolute; display: block; top: 50%; padding: 0; margin-left: 5px;">{{cartService.getNbArticleInCart()}}</span>
-
-  </div>
-  <div class="dropdown">
-      <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <img src="{{selectedCountry.flag}}" width="15" alt="{{selectedCountry.name}}">
-        <span>
-        {{selectedCountry.name}}
-        </span>
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <button *ngFor="let country of countries" (click)="selectCounty(country)" class="dropdown-item" type="button">
-            <img src="{{country.flag}}" width="15" alt="{{country.name}}">
-            <span>{{country.name}}</span>
+      <span class="badge badge-dark cart-artricles">{{cartService.getNbArticleInCart()}}</span>
+    </div>
+    <div>
+      <div class="dropdown">
+        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="{{selectedCountry.flag}}" width="15" alt="{{selectedCountry.name}}">
+          <span>
+          {{selectedCountry.name}}
+          </span>
         </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <button *ngFor="let country of countries" (click)="selectCounty(country)" class="dropdown-item bne-cursor-pointer" type="button">
+              <img src="{{country.flag}}" width="15" alt="{{country.name}}">
+              <span>{{country.name}}</span>
+          </button>
+        </div>
       </div>
     </div>
+  </div>
+ 
 </nav>
 
 <div class="sub-nav d-none d-md-flex">

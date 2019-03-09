@@ -1,0 +1,67 @@
+<form #form="ngForm" (ngSubmit)="submit(form)">
+  <div class="card list-group-item d-flex justify-content-between align-items-left">
+    <div class="card-header bne-cursor-pointer" id="headingCouleur" data-toggle="collapse" data-target="#collapseCouleur" aria-expanded="true" aria-controls="collapseCouleur">
+      <h5 class="mb-0">
+        <button class="btn btn-link">
+          Couleur
+        </button>
+      </h5>
+    </div>
+    <div id="collapseCouleur" class="collapse" aria-labelledby="headingCouleur" data-parent="#accordion">
+      <div class="row card-body">
+        <label *ngFor="let couleur of couleurs" class="col-5 container" for="couleurCheckbox{{couleur.label}}">
+          <input type="checkbox" id="couleurCheckbox{{couleur.label}}" [value]="couleur.label" (change)="filters($event, 'couleur')">
+          <span class="checkmark" [ngClass]="{'checkmark': couleur.label != 'Blanc', 'checkmark-white': couleur.label == 'Blanc' }" 
+          [ngStyle]="{'background-color': couleur.code, 'border': couleur.label == 'Blanc' ? '1px solid #838383' : ''}"></span>
+          <span class="checkmark-title">{{couleur.label}}</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="card list-group-item d-flex justify-content-between align-items-left">
+      <div class="card-header bne-cursor-pointer" id="headingPrix" data-toggle="collapse" data-target="#collapsePrix" aria-expanded="false" aria-controls="collapsePrix">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed">
+            Prix
+          </button>
+        </h5>
+      </div>
+      <div id="collapsePrix" class="collapse" aria-labelledby="headingPrix" data-parent="#accordion">
+        <div class="card-body">
+            <p class="row">
+                <small class="col-8">€ 10</small>
+                <small class="col-4">€ {{filterParams.rangePrix}}</small>
+            </p>
+            <input type="range" [(ngModel)]="filterParams.rangePrix" name="prix" class="custom-range d-flex" min="10" max="100" step="5" id="rangePrix">
+        </div>
+      </div>
+    </div>
+    <div class="card list-group-item d-flex justify-content-between align-items-left">
+      <div class="card-header bne-cursor-pointer" id="headingTaille" data-toggle="collapse" data-target="#collapseTaille" aria-expanded="false" aria-controls="collapseTaille">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed">
+            Taille
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTaille" class="collapse" aria-labelledby="headingTaille" data-parent="#accordion">
+        <div class="row card-body">
+            <label *ngFor="let taille of tailles" class="col-4 container" for="tailleCheckbox{{taille.label}}">
+                <input type="checkbox" id="tailleCheckbox{{taille.label}}" [value]="taille.label" (change)="filters($event, 'taille')">
+                <span class="checkmark-white" style="background-color: white; border: 1px solid #838383"></span>
+                <span class="checkmark-title">{{taille.label}}</span>
+            </label>
+        </div>
+      </div>
+    </div>
+    
+  <div class="btn-block text-center my-2" role="group" aria-label="Basic example">
+    <button type="submit" class="btn btn-dark btn-xs mr-3">Voir les articles</button>
+    <button type="button" (click)="reinitFilters()" class="btn btn-outline-danger btn-xs">Réinitialiser</button>
+  </div>
+</form>
+
+
+
+<!-- 
+<input id="ex8" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/> -->
