@@ -2,7 +2,8 @@ export class Article {
     constructor(
         public id: string,
         public title: string,
-        public categorie: string,
+        public categorieUser: string,
+        public categorieArticle: string,
         public image: string,
         public description: string,
         public price: number,

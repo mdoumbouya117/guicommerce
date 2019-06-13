@@ -12,17 +12,16 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
 
   { path: 'enfant', component: EnfantComponent },
-  { path: 'enfant/:categorie', component: ArticlesComponent},
-  { path: 'enfant/:categorie/:reference', component: ArticleDetailComponent},
+  { path: 'enfant/:categorieArticle', component: ArticlesComponent},
 
   { path: 'femme', component: FemmeComponent },
-  { path: 'femme/:categorie', component: ArticlesComponent},
-  { path: 'femme/:categorie/:reference', component: ArticleDetailComponent},
+  { path: 'femme/:categorieArticle', component: ArticlesComponent},
 
   { path: 'homme', component: HommeComponent},
-  { path: 'homme/:categorie', component: ArticlesComponent},
-  { path: 'homme/:categorie/:reference', component: ArticleDetailComponent},
-  //{ path: ':client/:categorie/:reference', component: ArticleDetailComponent} // client -> enfant, femme ou homme
+  { path: 'homme/:categorieArticle', component: ArticlesComponent},
+
+  { path: 'article-detail/:reference', component: ArticleDetailComponent},
+  //{ path: ':client/:categorieArticle/:reference', component: ArticleDetailComponent} // client -> enfant, femme ou homme
 
 ];
 

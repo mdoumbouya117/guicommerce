@@ -11,20 +11,22 @@ import { ArticlesService } from '../shared/services/articles/articles.service';
 })
 export class ArticlesComponent implements OnInit {
   articles: Article[];
-  categorie: string;
+  categorieArticle: string;
   listTypeTrie = ["croissant", "décroissant"];
   typeTrie = "";
   rangePrix = 100;
 
   constructor(private router: Router, private route: ActivatedRoute, public articlesService: ArticlesService) {}
     ngOnInit() {
-      this.articles = this.articlesService.getArticles();
-      this.categorie = this.route.snapshot.paramMap.get('categorie');
-      
+      this.categorieArticle = this.route.snapshot.paramMap.get('categorieArticle');
+      this.articles = this.articlesService.customFilter(this.categorieArticle);
+      if(this.articles.length === 0) {
+        this.articlesService.getArticles().subscribe(response => this.articles = response);
+      }
     }
 
     goToDetails = (article: Article) => {
-      this.router.navigate([`enfant/chaussures/${article.reference}`]);  // home
+      this.router.navigate([`article-detail/${article.reference}`]);  // home
     }
 
     trierParPrix = (typeTrie: any) => {

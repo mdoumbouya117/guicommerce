@@ -13,22 +13,22 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" style="min-height:400px" src="https://mosaic03.ztat.net/vgs/media/pdp-zoom/TH/32/2T/00/3N/11/TH322T003-N11@10.jpg" alt="First slide">
+                <img class="d-block w-100" style="min-height:400px" [src]="article.image" alt="{{article.title}}">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" style="min-height:400px" src="https://mosaic04.ztat.net/vgs/media/pdp-zoom/TH/32/2T/00/3N/11/TH322T003-N11@11.jpg" alt="Second slide">
+                <img class="d-block w-100" style="min-height:400px" [src]="article.image" alt="{{article.title}}">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" style="min-height:400px" src="https://mosaic03.ztat.net/vgs/media/pdp-zoom/TH/32/2T/00/3N/11/TH322T003-N11@9.jpg" alt="Third slide">
+                <img class="d-block w-100" style="min-height:400px" [src]="article.image" alt="{{article.title}}">
               </div>
               <div class="carousel-item">
-                  <img class="d-block w-100" style="min-height:400px" src="https://mosaic04.ztat.net/vgs/media/pdp-zoom/TH/32/2T/00/3N/11/TH322T003-N11@7.jpg" alt="fourth slide">
+                  <img class="d-block w-100" style="min-height:400px" [src]="article.image" alt="{{article.title}}">
                 </div>
               <div class="carousel-item">
-                <img class="d-block w-100" style="min-height:400px" src="https://mosaic03.ztat.net/vgs/media/packshot/pdp-zoom/TH/32/2T/00/3N/11/TH322T003-N11@12.jpg" alt="fifth slide">
+                <img class="d-block w-100" style="min-height:400px" [src]="article.image" alt="{{article.title}}">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" style="min-height:400px" src="https://mosaic04.ztat.net/vgs/media/pdp-zoom/TH/32/2T/00/3N/11/TH322T003-N11@8.jpg" alt="sixth slide">
+                <img class="d-block w-100" style="min-height:400px" [src]="article.image" alt="{{article.title}}">
               </div>
             </div>
             <a class="carousel-control-prev" href="#bneCarousel" role="button" data-slide="prev">
@@ -43,19 +43,19 @@
     </div>
   <div class="col-md-6 col-12">
       <p>
-          Titre: <span>titre</span>
+          Titre: <span>{{article.title}}</span>
         </p>
     <p>
-      Description: <span>desc</span>
+      Description: <span>{{article.description}}</span>
     </p>
     <p>
-        Prix: <span>12$</span>
+        Prix: <span>{{article.price}}$</span>
       </p>
   </div>
   </div>
 
   <div>
-    <button type="button" class="btn btn-secondary" (click)="increment()">Ajouter</button>
-    <button type="button" class="btn btn-secondary" (click)="decrement()">Supprimer</button>
+    <button type="button" class="btn btn-outline-success" (click)="increment()">Ajouter</button>
+    <button type="button" class="btn btn-outline-danger" (click)="decrement()">Supprimer</button>
   </div>
 </section>

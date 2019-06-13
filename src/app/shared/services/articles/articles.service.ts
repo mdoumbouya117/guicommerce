@@ -21,12 +21,8 @@ export class ArticlesService {
     this.http.get<Article[]>(this.url).subscribe(response => this.articles = response);
   }
 
-  getArticles(): Article[] {
-    // return this.http.get<Article[]>(this.url);
-    this.setArticles();
-    console.log('test ', this.articles)
-
-    return this.articles;
+  getArticles() {
+    return this.http.get<Article[]>(this.url);
   };
 
   getArticleById = (id: string) => {
@@ -35,9 +31,21 @@ export class ArticlesService {
     })
   }
 
+  getArticleByReference = (reference: string) => {
+    return articles.filter(article => {
+      return article.reference === reference;
+    })
+  }
+
+  customFilter = (filterParams: string) => {
+    this.http.get<Article[]>(this.url).subscribe(response => this.articles = response);
+    this.articles = this.articles.filter(res => res.categorieArticle == filterParams)
+    return this.articles;
+  }
+
   filterArticles(filterParams: any): any {
-      this.articles = this.getArticles().filter(article => {
+      /* this.articles = this.getArticles().filter(article => {
         return filterParams.couleurs.includes(article.couleur) || filterParams.tailles.includes(article.taille) || article.price <= filterParams.rangePrix;
-      });
+      }); */
   }
 }

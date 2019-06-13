@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { CartService } from '../shared/services/cart.service';
+import { ArticlesService } from '../shared/services/articles/articles.service';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,7 @@ import { CartService } from '../shared/services/cart.service';
 export class HeaderComponent implements OnInit {
   //router: Router;
   public collapsed: boolean = false;
+  public url: string;
 
   countries = [
     {
@@ -34,16 +36,20 @@ export class HeaderComponent implements OnInit {
 
   selectedCountry = this.countries[0];
 
-  constructor(private router: Router, public cartService: CartService) {}
+  constructor(private router: Router, public cartService: CartService, public articlesService: ArticlesService) {
+    router.events.subscribe((event) => {
+      if(event instanceof NavigationEnd) {
+        this.url = event["url"];
+      }
+    });
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    // console.log(`${this.articlesService.customFilter('vetements')}`)
+  }
 
   selectCounty = (country) => {
     this.selectedCountry = country;
-  }
-
-  gotoDetail(): void {
-   this.router.navigate(['/enfant']);
   }
 
 }

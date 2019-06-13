@@ -72,7 +72,7 @@
  
 </nav>
 
-<div class="sub-nav d-none d-md-flex">
+<div *ngIf="url == '/' || url == '/home'" class="sub-nav d-none d-md-flex">
   <button [routerLink]="['/enfant/nouveautes']" type="button" class="btn btn-outline-light bne-btn">Nouveautés</button>
   <!-- <button [routerLink]="['/enfant/chaussures']" routerLinkActive="active"
   [routerLinkActiveOptions]="{ exact: true }" type="button" class="btn btn-outline-light bne-btn">Chaussures</button> -->
