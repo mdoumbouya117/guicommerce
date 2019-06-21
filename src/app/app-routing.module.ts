@@ -5,20 +5,23 @@ import { EnfantComponent } from './home/enfant/enfant.component';
 import { FemmeComponent } from './home/femme/femme.component';
 import { HommeComponent } from './home/homme/homme.component';
 import { ArticleDetailComponent } from './articles/article-detail/article-detail.component';
-import { ArticlesComponent } from './articles/articles.component';
+// import { ArticlesComponent } from './articles/articles.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', pathMatch: 'full', component: HomeComponent },
+  // { path: 'home', component: HomeComponent },
 
   { path: 'enfant', component: EnfantComponent },
-  { path: 'enfant/:categorieArticle', component: ArticlesComponent},
+  { path: 'enfant/:categorieArticle', component: EnfantComponent},
+  // { path: 'enfant/:categorieArticle', component: ArticlesComponent},
 
   { path: 'femme', component: FemmeComponent },
-  { path: 'femme/:categorieArticle', component: ArticlesComponent},
+  { path: 'femme/:categorieArticle', component: FemmeComponent},
+  // { path: 'femme/:categorieArticle', component: ArticlesComponent},
 
   { path: 'homme', component: HommeComponent},
-  { path: 'homme/:categorieArticle', component: ArticlesComponent},
+  { path: 'homme/:categorieArticle', component: HommeComponent},
+  // { path: 'homme/:categorieArticle', component: ArticlesComponent},
 
   { path: 'article-detail/:reference', component: ArticleDetailComponent},
   //{ path: ':client/:categorieArticle/:reference', component: ArticleDetailComponent} // client -> enfant, femme ou homme

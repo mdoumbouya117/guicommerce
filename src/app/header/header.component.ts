@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationStart } from '@angular/router';
 import { CartService } from '../shared/services/cart.service';
 import { ArticlesService } from '../shared/services/articles/articles.service';
 
@@ -11,7 +11,7 @@ import { ArticlesService } from '../shared/services/articles/articles.service';
 export class HeaderComponent implements OnInit {
   //router: Router;
   public collapsed: boolean = false;
-  public url: string;
+  public url: string = '/';
 
   countries = [
     {
@@ -37,8 +37,8 @@ export class HeaderComponent implements OnInit {
   selectedCountry = this.countries[0];
 
   constructor(private router: Router, public cartService: CartService, public articlesService: ArticlesService) {
-    router.events.subscribe((event) => {
-      if(event instanceof NavigationEnd) {
+    this.router.events.subscribe((event) => {
+      if(event instanceof NavigationStart) {
         this.url = event["url"];
       }
     });
