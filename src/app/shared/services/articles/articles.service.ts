@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Article } from '../../models/article.model';
 import { articles } from '../../bd/articles';
 import { from } from 'rxjs';
+import { Router, ActivatedRoute, NavigationStart } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class ArticlesService {
   private url = 'assets/data/articles.json';
   public articles: Article[] = [];
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient, private router: Router, private activatedRoute: ActivatedRoute) { 
     this.http.get<Article[]>(this.url).subscribe(response => this.articles = response);
   }
 
@@ -37,9 +38,9 @@ export class ArticlesService {
     })
   }
 
-  customFilter = (filterParams: string) => {
+  customFilter = (filterParams: any) => {
     this.http.get<Article[]>(this.url).subscribe(response => this.articles = response);
-    this.articles = this.articles.filter(res => res.categorieArticle == filterParams)
+    this.articles = this.articles.filter(res => res.categorieArticle == filterParams.categorieArticle)
     return this.articles;
   }
 

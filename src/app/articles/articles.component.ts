@@ -11,18 +11,27 @@ import { ArticlesService } from '../shared/services/articles/articles.service';
 })
 export class ArticlesComponent implements OnInit {
   articles: Article[];
+  filterParams: any = {};
   categorieArticle: string;
+  categorieUser: string;
   listTypeTrie = ["croissant", "décroissant"];
   typeTrie = "";
   rangePrix = 100;
 
-  constructor(private router: Router, private route: ActivatedRoute, public articlesService: ArticlesService) {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, public articlesService: ArticlesService) {
+    let pathCategorieUser: any = this.activatedRoute.snapshot.url[0] ? this.activatedRoute.snapshot.url[0] : '';
+    if(pathCategorieUser && pathCategorieUser.path === 'enfant' || pathCategorieUser.path === 'femme' || pathCategorieUser.path === 'hommr') {
+      this.categorieUser = pathCategorieUser.path;
+    }
+    this.categorieArticle = this.activatedRoute.snapshot.paramMap.get('categorieArticle');
+    this.filterParams.categorieUser = this.categorieUser;
+    this.filterParams.categorieArticle = this.categorieArticle;
+    this.articles = this.articlesService.customFilter(this.filterParams);
+    if(this.articles.length === 0) {
+      this.articlesService.getArticles().subscribe(response => this.articles = response);
+    }
+  }
     ngOnInit() {
-      this.categorieArticle = this.route.snapshot.paramMap.get('categorieArticle');
-      this.articles = this.articlesService.customFilter(this.categorieArticle);
-      if(this.articles.length === 0) {
-        this.articlesService.getArticles().subscribe(response => this.articles = response);
-      }
     }
 
     goToDetails = (article: Article) => {

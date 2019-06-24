@@ -36,16 +36,14 @@ export class HeaderComponent implements OnInit {
 
   selectedCountry = this.countries[0];
 
-  constructor(private router: Router, public cartService: CartService, public articlesService: ArticlesService) {
+  constructor(private router: Router, public cartService: CartService, public articlesService: ArticlesService) { }
+
+  ngOnInit() {
     this.router.events.subscribe((event) => {
       if(event instanceof NavigationStart) {
         this.url = event["url"];
       }
     });
-  }
-
-  ngOnInit() {
-    // console.log(`${this.articlesService.customFilter('vetements')}`)
   }
 
   selectCounty = (country) => {

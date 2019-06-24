@@ -1,83 +1,99 @@
-<div id="accordion" class="list-group list-group-flush">
-  <div class="card list-group-item d-flex justify-content-between align-items-left">
-    <div class="card-header bne-cursor-pointer" id="headingVetements" data-toggle="collapse" data-target="#collapseVetements" aria-expanded="true" aria-controls="collapseVetements">
-      <h5 class="mb-0">
-        <button class="btn btn-link text-dark">
-            Vêtements
-        </button>
-      </h5>
-    </div>
-    <div id="collapseVetements" class="collapse" aria-labelledby="headingVetements" data-parent="#accordion">
-      <div class="card-body">
-        <div class="list-group">
-          <a class="list-group-item text-dark" [routerLink]="[this.categorieUser]">Voir tout</a>
+<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+  <li (click)="categorieUser = 'enfant'" class="nav-item">
+    <a class="nav-link" [ngClass]="{'active': categorieUser === 'enfant'}" id="enfant-tab" data-toggle="tab" href="#enfant" role="tab" aria-controls="enfant" aria-selected="true">ENFANT</a>
+  </li>
+  <li (click)="categorieUser = 'femme'" class="nav-item">
+    <a class="nav-link" [ngClass]="{'active': categorieUser === 'femme'}" id="femme-tab" data-toggle="tab" href="#femme" role="tab" aria-controls="femme" aria-selected="false">FEMME</a>
+  </li>
+  <li (click)="categorieUser = 'homme'" class="nav-item">
+    <a class="nav-link" [ngClass]="{'active': categorieUser === 'homme'}" id="homme-tab" data-toggle="tab" href="#homme" role="tab" aria-controls="homme" aria-selected="false">HOMME</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="{{categorieUser}}" role="tabpanel">
+    <!-- <div class="tab-pane fade show active" id="{{categorieUser}}" role="tabpanel" aria-labelledby="{{categorieUser}}-tab"> -->
+    <div id="accordion" class="list-group list-group-flush">
+      <div class="card list-group-item d-flex justify-content-between align-items-left">
+        <div class="card-header bne-cursor-pointer" id="headingVetements" data-toggle="collapse" data-target="#collapseVetements" aria-expanded="true" aria-controls="collapseVetements">
+          <h5 class="mb-0">
+            <button class="btn btn-link text-dark">
+                Vêtements
+            </button>
+          </h5>
+        </div>
+        <div id="collapseVetements" class="collapse" aria-labelledby="headingVetements" data-parent="#accordion">
+          <div class="card-body">
+            <div class="list-group">
+              <a class="list-group-item text-dark bne-cursor-pointer" (click)="gotoArticleCategorie('vetements')">Voir tout</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="card list-group-item d-flex justify-content-between align-items-left">
-    <div class="card-header bne-cursor-pointer" id="headingNouveautes" data-toggle="collapse" data-target="#collapseNouveautes" aria-expanded="false" aria-controls="collapseNouveautes">
-      <h5 class="mb-0">
-        <button class="btn btn-link text-dark collapsed">
-            Nouveautés
-        </button>
-      </h5>
-    </div>
-    <div id="collapseNouveautes" class="collapse" aria-labelledby="headingNouveautes" data-parent="#accordion">
-      <div class="card-body">
-        <div class="list-group">
-          <a class="list-group-item text-dark" [routerLink]="[this.categorieUser]">Voir tout</a>
+      <div class="card list-group-item d-flex justify-content-between align-items-left">
+        <div class="card-header bne-cursor-pointer" id="headingNouveautes" data-toggle="collapse" data-target="#collapseNouveautes" aria-expanded="false" aria-controls="collapseNouveautes">
+          <h5 class="mb-0">
+            <button class="btn btn-link text-dark collapsed">
+                Nouveautés
+            </button>
+          </h5>
+        </div>
+        <div id="collapseNouveautes" class="collapse" aria-labelledby="headingNouveautes" data-parent="#accordion">
+          <div class="card-body">
+            <div class="list-group">
+              <a class="list-group-item text-dark bne-cursor-pointer" (click)="gotoArticleCategorie('nouveautes')">Voir tout</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="card list-group-item d-flex justify-content-between align-items-left">
-    <div class="card-header bne-cursor-pointer" id="headingAccessoires" data-toggle="collapse" data-target="#collapseAccessoires" aria-expanded="false" aria-controls="collapseAccessoires">
-      <h5 class="mb-0">
-        <button class="btn btn-link text-dark collapsed">
-            Accessoires
-        </button>
-      </h5>
-    </div>
-    <div id="collapseAccessoires" class="collapse" aria-labelledby="headingAccessoires" data-parent="#accordion">
-      <div class="card-body">
-        <div class="list-group">
-          <a class="list-group-item text-dark" [routerLink]="[this.categorieUser]">Voir tout</a>
-          <a class="list-group-item text-dark" [routerLink]="[this.categorieUser]">Montres</a>
-          <a class="list-group-item text-dark" [routerLink]="[this.categorieUser]">Sacs</a>
-          <a class="list-group-item text-dark" [routerLink]="[this.categorieUser]">Lunettes de solei</a>
+      <div class="card list-group-item d-flex justify-content-between align-items-left">
+        <div class="card-header bne-cursor-pointer" id="headingAccessoires" data-toggle="collapse" data-target="#collapseAccessoires" aria-expanded="false" aria-controls="collapseAccessoires">
+          <h5 class="mb-0">
+            <button class="btn btn-link text-dark collapsed">
+                Accessoires
+            </button>
+          </h5>
+        </div>
+        <div id="collapseAccessoires" class="collapse" aria-labelledby="headingAccessoires" data-parent="#accordion">
+          <div class="card-body">
+            <div class="list-group">
+              <a class="list-group-item text-dark bne-cursor-pointer" (click)="gotoArticleCategorie('accessoires')">Voir tout</a>
+              <!-- <a class="list-group-item text-dark bne-cursor-pointer" (click)="gotoArticleCategorie('')">Montres</a>
+              <a class="list-group-item text-dark bne-cursor-pointer" (click)="gotoArticleCategorie('')">Sacs</a>
+              <a class="list-group-item text-dark bne-cursor-pointer" (click)="gotoArticleCategorie('')">Lunettes de solei</a> -->
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="card list-group-item d-flex justify-content-between align-items-left">
-    <div class="card-header bne-cursor-pointer" id="headingCostumes" data-toggle="collapse" data-target="#collapseCostumes" aria-expanded="false" aria-controls="collapseCostumes">
-      <h5 class="mb-0">
-        <button class="btn btn-link text-dark collapsed">
-            Costumes
-        </button>
-      </h5>
-    </div>
-    <div id="collapseCostumes" class="collapse" aria-labelledby="headingCostumes" data-parent="#accordion">
-      <div class="card-body">
-        <div class="list-group">
-          <a class="list-group-item text-dark" [routerLink]="[this.categorieUser]">Voir tout</a>
+      <div class="card list-group-item d-flex justify-content-between align-items-left">
+        <div class="card-header bne-cursor-pointer" id="headingCostumes" data-toggle="collapse" data-target="#collapseCostumes" aria-expanded="false" aria-controls="collapseCostumes">
+          <h5 class="mb-0">
+            <button class="btn btn-link text-dark collapsed">
+                Costumes
+            </button>
+          </h5>
+        </div>
+        <div id="collapseCostumes" class="collapse" aria-labelledby="headingCostumes" data-parent="#accordion">
+          <div class="card-body">
+            <div class="list-group">
+              <a class="list-group-item text-dark bne-cursor-pointer" (click)="gotoArticleCategorie('costumes')">Voir tout</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="card list-group-item d-flex justify-content-between align-items-left">
-    <div class="card-header bne-cursor-pointer" id="headingTendances" data-toggle="collapse" data-target="#collapseTendances" aria-expanded="false" aria-controls="collapseTendances">
-      <h5 class="mb-0">
-        <button class="btn btn-link text-dark collapsed">
-            Tendances
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTendances" class="collapse" aria-labelledby="headingTendances" data-parent="#accordion">
-      <div class="card-body">
-        <div class="list-group">
-          <a class="list-group-item text-dark" [routerLink]="[this.categorieUser]">Voir tout</a>
+      <div class="card list-group-item d-flex justify-content-between align-items-left">
+        <div class="card-header bne-cursor-pointer" id="headingTendances" data-toggle="collapse" data-target="#collapseTendances" aria-expanded="false" aria-controls="collapseTendances">
+          <h5 class="mb-0">
+            <button class="btn btn-link text-dark collapsed">
+                Tendances
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTendances" class="collapse" aria-labelledby="headingTendances" data-parent="#accordion">
+          <div class="card-body">
+            <div class="list-group">
+              <a class="list-group-item text-dark bne-cursor-pointer" (click)="gotoArticleCategorie('tendances')">Voir tout</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
