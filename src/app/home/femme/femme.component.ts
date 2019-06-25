@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, NavigationStart } from '@angular/router'
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'
 
 @Component({
   selector: 'app-femme',
@@ -12,7 +12,7 @@ export class FemmeComponent implements OnInit {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     this.router.events.subscribe((params) => {
-      if(params instanceof NavigationStart) {
+      if(params instanceof NavigationEnd) {
         this.categorieArticle = this.activatedRoute.snapshot.paramMap.get('categorieArticle') ? this.activatedRoute.snapshot.paramMap.get('categorieArticle') : '';
       }
     });

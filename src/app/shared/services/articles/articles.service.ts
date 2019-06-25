@@ -40,7 +40,10 @@ export class ArticlesService {
 
   customFilter = (filterParams: any) => {
     this.http.get<Article[]>(this.url).subscribe(response => this.articles = response);
-    this.articles = this.articles.filter(res => res.categorieArticle == filterParams.categorieArticle)
+    this.articles = this.articles.filter(res => {
+      res.categorieUser == filterParams.categorieUser && res.categorieArticle == filterParams.categorieArticle
+      && filterParams.couleurs.includes(res.couleur) && res.price <= filterParams.rangePrix && filterParams.tailles.includes(res.taille)
+    })
     return this.articles;
   }
 

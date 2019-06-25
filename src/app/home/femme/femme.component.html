@@ -10,30 +10,30 @@
     </div>
   </div>
   <section>
-    <div *ngIf="categorieArticle">
+    <div *ngIf="categorieArticle && categorieArticle.length > 0; else elseBlock">
       <app-articles></app-articles>
     </div>
-    <div *ngIf="!categorieArticle">
+    <ng-template #elseBlock>
       <div class="card-group">
-        <div class="card" (click)="gotoArticleCategorie('vetements')">
+        <div class="card bne-cursor-pointer" (click)="gotoArticleCategorie('vetements')">
           <img class="card-img-top" src="https://content.asos-media.com/-/media/homepages/mw/2019/06/24/global-animal-print-moment2.png" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Vêtements</h5>
           </div>
         </div>
-        <div class="card" (click)="gotoArticleCategorie('accessoires')">
+        <div class="card bne-cursor-pointer" (click)="gotoArticleCategorie('accessoires')">
           <img class="card-img-top" src="https://static.pullandbear.net/2/static2/itxwebstandard/images/home/2019-06/21/mobile/Man_Calzado.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Accessoires</h5>
           </div>
         </div>
-        <div class="card" (click)="gotoArticleCategorie('costumes')">
+        <div class="card bne-cursor-pointer" (click)="gotoArticleCategorie('costumes')">
           <img class="card-img-top" src="https://content.asos-media.com/-/media/homepages/mw/2019/06/24/global-animal-print-moment2.png" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Costumes</h5>
           </div>
         </div>
       </div>
-    </div>
+    </ng-template>
   </section>
 </main>

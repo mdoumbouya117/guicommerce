@@ -27,9 +27,8 @@ export class ArticlesComponent implements OnInit {
     this.filterParams.categorieUser = this.categorieUser;
     this.filterParams.categorieArticle = this.categorieArticle;
     this.articles = this.articlesService.customFilter(this.filterParams);
-    if(this.articles.length === 0) {
-      this.articlesService.getArticles().subscribe(response => this.articles = response);
-    }
+    if(this.articles.length > 0) sessionStorage.setItem('articles', JSON.stringify(this.articles));
+    if(this.articles.length === 0) this.articles = JSON.parse(sessionStorage.getItem('articles'));
   }
     ngOnInit() {
     }

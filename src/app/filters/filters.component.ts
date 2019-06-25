@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'
 import { articles } from '../shared/bd/articles';
 import { ArticlesService } from '../shared/services/articles/articles.service';
 
@@ -59,8 +60,14 @@ export class FiltersComponent implements OnInit {
     tailles: [],
     rangePrix: this.rangePrix
   };
+  public categorieArticle: string;
 
-  constructor(private articlesService: ArticlesService) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private articlesService: ArticlesService) {
+    this.router.events.subscribe((params) => {
+      if(params instanceof NavigationEnd) {
+        this.categorieArticle = this.activatedRoute.snapshot.paramMap.get('categorieArticle') ? this.activatedRoute.snapshot.paramMap.get('categorieArticle') : '';
+      }
+    });
   }
 
   ngOnInit() {
@@ -71,8 +78,7 @@ export class FiltersComponent implements OnInit {
   }
 
   submit() {
-    let h = this.articlesService.filterArticles(this.filterParams);
-    console.log('allMatch 54 ',h)
+    this.articlesService.customFilter(this.filterParams)
   }
 
   removeElementInArray = (array: string[], element: string) => {
