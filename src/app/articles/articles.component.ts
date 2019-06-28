@@ -20,7 +20,7 @@ export class ArticlesComponent implements OnInit {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, public articlesService: ArticlesService) {
     let pathCategorieUser: any = this.activatedRoute.snapshot.url[0] ? this.activatedRoute.snapshot.url[0] : '';
-    if(pathCategorieUser && pathCategorieUser.path === 'enfant' || pathCategorieUser.path === 'femme' || pathCategorieUser.path === 'hommr') {
+    if(pathCategorieUser && (pathCategorieUser.path === 'enfant' || pathCategorieUser.path === 'femme' || pathCategorieUser.path === 'homme')) {
       this.categorieUser = pathCategorieUser.path;
     }
     this.categorieArticle = this.activatedRoute.snapshot.paramMap.get('categorieArticle');

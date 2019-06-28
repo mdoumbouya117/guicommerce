@@ -41,14 +41,20 @@ export class ArticlesService {
   customFilter = (filterParams: any) => {
     this.http.get<Article[]>(this.url).subscribe(response => this.articles = response);
     this.articles = this.articles.filter(res => {
-      res.categorieUser == filterParams.categorieUser && res.categorieArticle == filterParams.categorieArticle
-      && filterParams.couleurs.includes(res.couleur) && res.price <= filterParams.rangePrix && filterParams.tailles.includes(res.taille)
+      return (
+        res.categorieUser == filterParams.categorieUser
+         && 
+         res.categorieArticle == filterParams.categorieArticle
+      )
     })
     return this.articles;
   }
 
   filterArticles(filterParams: any): any {
-      /* this.articles = this.getArticles().filter(article => {
+    this.articles = JSON.parse(sessionStorage.getItem('articles')).filter(res => {
+      if(res.price <= filterParams.rangePrix && filterParams.couleurs.includes(res.couleur) && filterParams.tailles.includes(res.taille+"")) return res
+    });
+/*       this.articles = this.getArticles().filter(article => {
         return filterParams.couleurs.includes(article.couleur) || filterParams.tailles.includes(article.taille) || article.price <= filterParams.rangePrix;
       }); */
   }

@@ -78,7 +78,8 @@ export class FiltersComponent implements OnInit {
   }
 
   submit() {
-    this.articlesService.customFilter(this.filterParams)
+    // this.articlesService.customFilter(this.filterParams)
+    this.articlesService.filterArticles(this.filterParams);
   }
 
   removeElementInArray = (array: string[], element: string) => {
