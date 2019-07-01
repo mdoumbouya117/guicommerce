@@ -62,7 +62,7 @@
     { "id": "article6",
         "title": "Title6",
         "categorieUser": "femme",
-        "categorieArticle": "accessoires",
+        "categorieArticle": "vetements",
         "image": "../assets/images/femme-sac.jpg",
         "description": "desc6",
         "price": 12,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Article } from '../shared/models/article.model';
 import { articles } from '../shared/bd/articles';
 import { ArticlesService } from '../shared/services/articles/articles.service';
@@ -22,13 +22,24 @@ export class ArticlesComponent implements OnInit {
     let pathCategorieUser: any = this.activatedRoute.snapshot.url[0] ? this.activatedRoute.snapshot.url[0] : '';
     if(pathCategorieUser && (pathCategorieUser.path === 'enfant' || pathCategorieUser.path === 'femme' || pathCategorieUser.path === 'homme')) {
       this.categorieUser = pathCategorieUser.path;
+      this.categorieArticle = this.activatedRoute.snapshot.paramMap.get('categorieArticle');
+      this.filterParams.categorieUser = this.categorieUser;
+      this.filterParams.categorieArticle = this.categorieArticle;
+      if(JSON.parse(sessionStorage.getItem('articles')) && JSON.parse(sessionStorage.getItem('articles')).length > 0) {
+        let articles = JSON.parse(sessionStorage.getItem('articles'));
+        if(articles[0].categorieUser != this.categorieUser || articles[0].categorieArticle != this.categorieArticle) {
+          this.articles = this.articlesService.customFilter(this.filterParams);
+          sessionStorage.setItem('articles', JSON.stringify(this.articles));
+        } else {
+          this.articles = JSON.parse(sessionStorage.getItem('articles'));
+        }
+      } else {
+        this.articles = this.articlesService.customFilter(this.filterParams);
+        sessionStorage.setItem('articles', JSON.stringify(this.articles));
+      }
+    } else {
+      router.navigate(['']);
     }
-    this.categorieArticle = this.activatedRoute.snapshot.paramMap.get('categorieArticle');
-    this.filterParams.categorieUser = this.categorieUser;
-    this.filterParams.categorieArticle = this.categorieArticle;
-    this.articles = this.articlesService.customFilter(this.filterParams);
-    if(this.articles.length > 0) sessionStorage.setItem('articles', JSON.stringify(this.articles));
-    if(this.articles.length === 0) this.articles = JSON.parse(sessionStorage.getItem('articles'));
   }
     ngOnInit() {
     }
