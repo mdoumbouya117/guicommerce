@@ -40,22 +40,24 @@ export class ArticlesService {
 
   customFilter = (filterParams: any) => {
     this.http.get<Article[]>(this.url).subscribe(response => this.articles = response);
-    this.articles = this.articles.filter(res => {
+    this.articles = this.articles.filter(article => {
       return (
-        res.categorieUser == filterParams.categorieUser
+        article.categorieUser == filterParams.categorieUser
          && 
-         res.categorieArticle == filterParams.categorieArticle
+         article.categorieArticle == filterParams.categorieArticle
       )
     })
     return this.articles;
   }
 
   filterArticles(filterParams: any): any {
-    this.articles = JSON.parse(sessionStorage.getItem('articles')).filter(res => {
-      if(res.price <= filterParams.rangePrix && filterParams.couleurs.includes(res.couleur) && filterParams.tailles.includes(res.taille+"")) return res
+    this.articles = JSON.parse(sessionStorage.getItem('articles')).filter(article => {
+      if(article.price <= filterParams.rangePrix 
+        && 
+        (filterParams.couleurs.length > 0 ? filterParams.couleurs.includes(article.couleur) : true) 
+        && 
+        (filterParams.tailles.length > 0 ? filterParams.tailles.includes(article.taille+"") : true)) 
+      return article
     });
-/*       this.articles = this.getArticles().filter(article => {
-        return filterParams.couleurs.includes(article.couleur) || filterParams.tailles.includes(article.taille) || article.price <= filterParams.rangePrix;
-      }); */
   }
 }
